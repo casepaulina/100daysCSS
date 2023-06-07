@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #554c56;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+.container{
+    aspect-ratio: 1/1;
+    width: 500px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 0.65fr 0.35fr;
+    box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.377);
+
+}
+
+.left{
+    height: 80%;
+    width: 100%;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.img{
+    height: 130px;
+    width: 130px;
+    background-image:url(img/paulina.jpg);
+    background-size:contain;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.img::before{
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: -6px;
+    left: -6px;
+    border: 1.5px solid ;
+    border-color: #c4c4f4d8  transparent #c4c4f4d8 transparent;
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+}
+
+.img:hover:before{
+    transform: rotateZ(360deg);
+}
+
+.img::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -11.5px;
+    left: -11.5px;
+    border: 1.5px solid ;
+    border-color:  #c4c4f4d8 transparent #c4c4f4d8 transparent;
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+}
+
+.img:hover::after{
+    transform: rotateZ(-360deg);
+}
+
+.name{
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 1.3rem;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 55%;
+    gap: 10%;
+    font-weight: bold;
+}
+
+.link{
+    height: 40%;
+    border-radius: 30px;
+    border: 2px solid #5e5e5d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link:hover{
+    color: white;
+    background-color: #c4c4f4d8;
+    transition: 500ms ease-in-out;
+}
+
+/*right*/
+.right{
+    display: flex;
+    flex-direction: column;
+}
+
+.info{
+    background-color:  #c4c4f4d8;
+    height: 33.3%;
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+
+.info span{
+    font-size: 1.8rem;
+    font-weight: bold;    
+}
+
+.info:hover{
+    background-color: #8EC5FC;
+}
+/*right*/
+
+
